@@ -1,0 +1,64 @@
+ALGORITHM  sentence
+
+VAR
+    a : INTEGER ;
+    sente : STRING ;
+   
+BEGIN
+IF (sente[length - 1] Not ".") THEN
+    Write(false);
+END_IF
+
+    Write("Enter a sentence");
+    Read(sente);
+    a:= length(sente);
+    Write(a);
+END
+
+
+
+ALGORITHM The number of words in the sentence
+
+VAR
+    sente1 : STRING;
+    nb :INTEGER;
+    i : INTEGER;
+
+BEGIN
+IF (sente1[length - 1] Not ".") THEN
+    Write(false);
+END_IF
+
+    Write("Enter a sentence");
+    Read(sente1);
+    nb:=0;
+    FOR i FROM 1 TO length(sente1) STEP step  DO
+        IF (sente1 [i] = " ") THEN
+            nb:=nb + 1
+        END_IF
+    END_FOR
+    Write(nb);
+END
+
+ALGORITHM The number of vowels in the sentence
+
+VAR
+    i,b : INTEGER;
+    sente2 : STRING;
+
+BEGIN
+IF (sente2[length - 1] Not ".") THEN
+    Write(false);
+END_IF
+
+    Write("Enter a sentence");
+    Read(sente2);
+    b:=0;
+    FOR i FROM 1 TO length(sente2) STEP step  DO
+        IF (sente2[i] = "a" OR sente2[i] = "e" OR sente2[i] = "i" OR sente2[i] = "o" OR sente2[i] = "u" OR sente2[i] = "y") THEN
+            b:= b + 1;
+        END_IF
+    END_FOR
+    Write(b);
+END
+
